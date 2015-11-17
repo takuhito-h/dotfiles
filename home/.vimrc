@@ -5,6 +5,12 @@ set expandtab
 set shiftwidth=4
 set number ruler
 set laststatus=2
+set wildmenu
+set showcmd
+set hlsearch
+set hidden
+set smartindent
+set smarttab
 
 augroup numberwidth
     autocmd!
@@ -46,6 +52,32 @@ NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'crusoexia/vim-monokai'
 NeoBundle 'itchyny/lightline.vim'
+NeoBundleLazy 'Shougo/vimfiler.vim', {
+\ 'depends' : ["Shougo/unite.vim"],
+\ 'autoload' : {
+\   'commands' : [ "VimFilerTab", "VimFiler", "VimFilerExplorer", "VimFilerBufferDir" ],
+\   'mappings' : ['<Plug>(vimfiler_switch)'],
+\   'explorer' : 1,
+\ }}
+NeoBundle 'elzr/vim-json'
+NeoBundleLazy 'tpope/vim-endwise', { 'autoload' : { 'insert' : 1, } }
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-scripts/matchit.zip'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'Shougo/neocomplete.vim'
+
+" html
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'othree/html5.vim'
+
+" Javascript
+NeoBundle 'pangloss/vim-javascript'
+
+" CSS
+NeoBundle 'lilydjwg/colorizer'
 
 call neobundle#end()
 
